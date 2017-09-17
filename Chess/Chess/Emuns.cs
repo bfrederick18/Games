@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    class Emuns
+    public enum PieceType
     {
+        Pawn,
+        Knight,
+        Bishop,
+        Rook,
+        Queen,
+        King,
+        None
+    }
+
+    public enum XCord
+    {
+        A,
+        B,
+        C,
+        D,
+        E,
+        F,
+        G,
+        H
     }
 }

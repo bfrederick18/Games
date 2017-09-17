@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chess
+namespace WindexedBleach
 {
-    public class Board
+    class Program
     {
-        //Space[,] board = new Space[8, 8]
-        //{
-        //    { }
-        //}
-
-
-
+        static void Main(string[] args)
+        {
+        }
     }
 }
