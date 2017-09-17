@@ -29,6 +29,7 @@ namespace Chess
             Console.WriteLine("    -----------------------------------------");
             Console.WriteLine("  8 | BR | BN | BB | BQ | BK | BB | BN | BR |");
             Console.WriteLine("    -----------------------------------------");
+            Console.WriteLine("                                             ");
 
 
 
