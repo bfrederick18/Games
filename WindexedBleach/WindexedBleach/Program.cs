@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using Console = Colorful.Console;
 
 namespace WindexedBleach
 {
@@ -10,12 +12,19 @@ namespace WindexedBleach
     {
         static void Main(string[] args)
         {
+            Dialogue DialogueType = new Dialogue();
             SpecialTyping SpecialType = new SpecialTyping();
+            string username;
+            #region Welcomes&Stuff
 
-            #region Welcome
-            SpecialType.ScrollType("@@@", 0, SpecialType.line, 50);
+            SpecialType.NextLine();
+            DialogueType.NoUserDialogue("user", false);
+            username = Console.ReadLine();
 
 
+            DialogueType.WriteDialogue("Welcome to Windexed Bleach a.k.a *Death* (Thad 10/15)", "trust");
+
+            #endregion
             Console.ReadKey();
         }
 
