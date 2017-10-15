@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Console = Colorful.Console;
+using System.Xml.Linq;
 
 namespace WindexedBleach
 {
@@ -15,6 +16,12 @@ namespace WindexedBleach
             Dialogue DialogueType = new Dialogue();
             SpecialTyping SpecialType = new SpecialTyping();
             string username;
+
+            string xmlFile = "C:\\Users\\Brandon\\Documents\\Github\\Games\\WindexedBleach\\WindexedBleach\\Data.xml";
+
+            XDocument doc = new XDocument();
+            doc = XDocument.Load("Data.xml");
+
             #region Welcomes&Stuff
 
             SpecialType.NextLine();
