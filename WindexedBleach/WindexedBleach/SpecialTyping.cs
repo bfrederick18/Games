@@ -6,19 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindexedBleach
 {
-    class Program
+    public class SpecialTyping
     {
-        static void Main(string[] args)
-        {
-            SpecialTyping SpecialType = new SpecialTyping();
-
-            #region Welcome
-            SpecialType.ScrollType("@@@", 0, SpecialType.line, 50);
-
-
-            Console.ReadKey();
-        }
-
+        public int line = 0;
         /// <summary>
         /// Magical draw function written by abe
         /// </summary>
@@ -35,5 +25,28 @@ namespace WindexedBleach
                 Console.Write(character);
             }
         }
+
+        public void ScrollType(string word, int x, int y, int typingSpeed)
+        {
+            List<char> charList = word.ToList<char>();
+            int newX = x;
+            int newY = y;
+
+            for (int i = 0; i < charList.Count; i++)
+            {
+                if (newX >= 105 && charList[i-1] == ' ')
+                {
+                    newX = x;
+                    newY++;
+                }
+
+                Draw(charList[i], newX, newY, 1);
+                System.Threading.Thread.Sleep(typingSpeed);
+                newX++;
+            }
+            line++;
+        }
+
+
     }
 }
